@@ -6,12 +6,16 @@
     --accent:#BF5700;
     --line:#e7e0da;
     --alt:#f3f0ec;
-    --max:1120px;
+    --max:1200px;
 }
 
-*{box-sizing:border-box}
+*{
+    box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     margin:0;
@@ -26,14 +30,18 @@ a{
     text-decoration:none;
 }
 
-a:hover{text-decoration:underline}
+a:hover{
+    text-decoration:underline;
+}
 
 .wrap{
-    width:min(92%,var(--max));
+    width:min(94%,var(--max));
     margin:auto;
 }
 
-.narrow{max-width:850px}
+.narrow{
+    max-width:850px;
+}
 
 .site-header{
     position:sticky;
@@ -76,30 +84,9 @@ nav a{
 
 .hero-grid{
     display:grid;
-    grid-template-columns:minmax(0,1fr) 180px;
-    gap:42px;
+    grid-template-columns:minmax(0,1fr) 220px;
+    gap:55px;
     align-items:center;
-}
-
-.portrait-card{
-    width:180px;
-    padding:12px;
-    justify-self:end;
-}
-
-.portrait{
-    display:block;
-    width:100%;
-    height:205px;
-    object-fit:cover;
-    object-position:center 28%;
-    border-radius:7px;
-    margin:0 0 12px;
-}
-
-.portrait-card p{
-    margin:6px 0;
-    font-size:.86rem;
 }
 
 .kicker,
@@ -111,7 +98,9 @@ nav a{
     color:var(--accent);
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3{
     line-height:1.18;
 }
 
@@ -158,12 +147,21 @@ h1{
     color:var(--muted);
     display:flex;
     gap:8px;
+    flex-wrap:wrap;
 }
 
 /* PROFILE */
 
+.portrait-card,
+.card,
+.project{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:10px;
+}
+
 .portrait-card{
-    width:190px;
+    width:220px;
     padding:14px;
     justify-self:end;
 }
@@ -171,11 +169,16 @@ h1{
 .portrait{
     display:block;
     width:100%;
-    height:215px;
+    height:250px;
     object-fit:cover;
     object-position:center 28%;
     border-radius:7px;
     margin:0 0 14px;
+}
+
+.portrait-card p{
+    margin:6px 0;
+    font-size:.86rem;
 }
 
 .muted{
@@ -276,6 +279,7 @@ footer{
 /* TABLET */
 
 @media(max-width:900px){
+
     nav{
         gap:12px;
     }
@@ -285,20 +289,23 @@ footer{
     }
 
     .hero-grid{
-        grid-template-columns:1.4fr .6fr;
+        grid-template-columns:minmax(0,1fr) 190px;
         gap:35px;
     }
 
     .portrait-card{
-        width:180px;
+        width:190px;
     }
 
     .portrait{
-        height:205px;
+        height:220px;
     }
 }
 
+/* MOBILE */
+
 @media(max-width:800px){
+
     .hero-grid,
     .three,
     .two{
