@@ -6,7 +6,7 @@
     --accent:#BF5700;
     --line:#e7e0da;
     --alt:#f3f0ec;
-    --max:1200px;
+    --max:1450px;
 }
 
 *{
@@ -35,7 +35,7 @@ a:hover{
 }
 
 .wrap{
-    width:min(94%,var(--max));
+    width:min(96%,var(--max));
     margin:auto;
 }
 
