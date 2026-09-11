@@ -76,9 +76,30 @@ nav a{
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.55fr .55fr;
-    gap:60px;
+    grid-template-columns:minmax(0,1fr) 180px;
+    gap:42px;
     align-items:center;
+}
+
+.portrait-card{
+    width:180px;
+    padding:12px;
+    justify-self:end;
+}
+
+.portrait{
+    display:block;
+    width:100%;
+    height:205px;
+    object-fit:cover;
+    object-position:center 28%;
+    border-radius:7px;
+    margin:0 0 12px;
+}
+
+.portrait-card p{
+    margin:6px 0;
+    font-size:.86rem;
 }
 
 .kicker,
