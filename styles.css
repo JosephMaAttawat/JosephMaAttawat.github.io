@@ -89,7 +89,15 @@ nav a{
     align-items:center;
 }
 
-.kicker,
+.kicker{
+    text-transform:uppercase;
+    letter-spacing:.07em;
+    font-size:.70rem;
+    font-weight:700;
+    color:var(--accent);
+    white-space:nowrap;
+}
+
 .section-label{
     text-transform:uppercase;
     letter-spacing:.09em;
@@ -382,4 +390,8 @@ footer{
 
 @media(max-width:800px){
     .four{grid-template-columns:1fr;}
+    .kicker{
+    white-space:normal;
+    font-size:.68rem;
+}
 }
