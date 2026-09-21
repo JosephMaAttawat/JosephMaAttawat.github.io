@@ -6,7 +6,6 @@
     --accent:#BF5700;
     --line:#e7e0da;
     --alt:#f3f0ec;
-    --max:1450px;
 }
 
 *{
@@ -119,7 +118,7 @@ h1{
 
 .subtitle{
     font-size:1.28rem;
-    max-width:760px;
+    max-width:900px;
     color:#47515a;
 }
 
@@ -227,7 +226,7 @@ h2{
 
 .pub{
     display:grid;
-    grid-template-columns:70px 1fr;
+    grid-template-columns:70px minmax(0,1fr);
     gap:18px;
     padding:24px 0;
     border-bottom:1px solid var(--line);
@@ -241,6 +240,21 @@ h2{
 .year{
     font-weight:700;
     color:var(--accent);
+}
+
+.publication-links{
+    margin-top:10px !important;
+    font-size:.92rem;
+    color:var(--muted);
+}
+
+.publication-links a{
+    font-weight:700;
+    letter-spacing:.03em;
+}
+
+.publication-links span{
+    margin:0 5px;
 }
 
 /* PROJECTS */
@@ -280,7 +294,6 @@ footer{
 /* TABLET */
 
 @media(max-width:900px){
-
     nav{
         gap:12px;
     }
@@ -306,6 +319,9 @@ footer{
 /* MOBILE */
 
 @media(max-width:800px){
+    .wrap{
+        width:90%;
+    }
 
     .hero-grid,
     .three,
@@ -318,7 +334,7 @@ footer{
     }
 
     .hero{
-        padding-top:56px;
+        padding:56px 0 50px;
     }
 
     .portrait-card{
@@ -330,4 +346,40 @@ footer{
         width:100%;
         height:205px;
     }
+
+    .pub{
+        grid-template-columns:1fr;
+        gap:6px;
+    }
+
+    h1{
+        font-size:clamp(2.5rem,12vw,4rem);
+    }
+
+    h2{
+        font-size:1.9rem;
+    }
+}
+
+
+/* Added for revised academic profile */
+.four{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.teaching-intro{
+    max-width:1050px;
+    margin:0 0 28px;
+}
+
+.teaching-intro p{
+    margin:.55em 0;
+}
+
+@media(max-width:1100px){
+    .four{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:800px){
+    .four{grid-template-columns:1fr;}
 }
